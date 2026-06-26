@@ -1,0 +1,33 @@
+{
+  "name": "estetica-tatyelli-cristina",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicação Next.js da Estética Tatyelli Cristina.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/prepare-standalone.mjs",
+    "start": "node .next/standalone/server.js",
+    "lint": "next typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "framer-motion": "latest",
+    "gsap": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "playwright": "^1.61.1",
+    "postcss": "8.5.10",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}

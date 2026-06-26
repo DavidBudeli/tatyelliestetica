@@ -1,0 +1,18 @@
+{
+  "brand": "Estética Tatyelli Cristina",
+  "assetRoot": "/public/assets/tatyelli/logo/",
+  "primary": "logo-tatyelli-horizontal.svg",
+  "mobile": "logo-tatyelli-symbol.svg",
+  "footerDark": "logo-tatyelli-light.svg",
+  "favicon": "favicon.ico",
+  "ogImage": "og-tatyelli.png",
+  "colors": {
+    "tatyelliGreen": "#062E26",
+    "tatyelliGreenDark": "#031F1A",
+    "tatyelliGold": "#C8A24A",
+    "tatyelliGoldSoft": "#D8C48A",
+    "tatyelliBeige": "#E9DFC9",
+    "tatyelliOffwhite": "#F7F2E8",
+    "tatyelliGraphite": "#1D1D1B"
+  }
+}
