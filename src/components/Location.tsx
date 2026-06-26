@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { siteConfig, whatsappUrl } from "@/lib/constants";
+import { siteConfig } from "@/lib/constants";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Location() {
   return (
@@ -33,9 +34,9 @@ export function Location() {
               Abrir no Google Maps
             </motion.a>
             <motion.a
-              href={whatsappUrl("Olá, Tatyelli! Vim pelo site e gostaria de saber o endereço da clínica.")}
+              href={getWhatsAppUrl("Olá, Tatyelli! Vim pelo site e gostaria de saber o endereço da clínica.")}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-tatyelli-green px-5 text-center font-black text-white"

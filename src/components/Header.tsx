@@ -3,7 +3,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { assets, navItems, whatsappUrl } from "@/lib/constants";
+import { assets, navItems } from "@/lib/constants";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-tatyelli-green/10 bg-tatyelli-offwhite/[0.92] backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-[1001] border-b border-tatyelli-green/10 bg-tatyelli-offwhite/[0.92] backdrop-blur-xl">
       <div className="container-page flex h-[var(--header-height)] items-center justify-between gap-3">
         <a href="#inicio" aria-label="Estética Tatyelli Cristina" className="focus-ring flex min-w-0 items-center">
           <img
@@ -44,9 +45,9 @@ export function Header() {
         </nav>
 
         <motion.a
-          href={whatsappUrl()}
+          href={getWhatsAppUrl()}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           whileHover={{ y: -2, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="focus-ring hidden min-h-11 items-center justify-center rounded-md bg-tatyelli-green px-4 text-sm font-black text-white shadow-soft transition-colors hover:bg-tatyelli-green-soft lg:inline-flex"
@@ -72,7 +73,7 @@ export function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-x-0 top-[var(--header-height)] z-40 min-h-[calc(100dvh-var(--header-height))] bg-tatyelli-green-dark/30 p-4 backdrop-blur-sm lg:hidden"
+            className="fixed inset-x-0 top-[var(--header-height)] z-[1000] min-h-[calc(100dvh-var(--header-height))] bg-tatyelli-green-dark/30 p-4 backdrop-blur-sm lg:hidden"
             onClick={() => setOpen(false)}
           >
             <motion.nav
@@ -95,9 +96,9 @@ export function Header() {
                 </a>
               ))}
               <motion.a
-                href={whatsappUrl()}
+                href={getWhatsAppUrl()}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 whileTap={{ scale: 0.98 }}
                 className="mt-2 rounded-md bg-tatyelli-green px-4 py-3 text-center text-base font-black text-white"
               >

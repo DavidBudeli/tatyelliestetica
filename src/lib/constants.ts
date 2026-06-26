@@ -18,12 +18,6 @@ export const siteConfig = {
   },
 };
 
-export const defaultWhatsappMessage =
-  "Olá, Tatyelli! Vim pelo site e gostaria de agendar uma avaliação.";
-
-export const whatsappUrl = (message = defaultWhatsappMessage) =>
-  `https://wa.me/${siteConfig.whatsappPhone}?text=${encodeURIComponent(message)}`;
-
 export const navItems = [
   { label: "Início", href: "#inicio" },
   { label: "Procedimentos", href: "#procedimentos" },
@@ -64,42 +58,36 @@ export const services = [
     image: assets.facial,
     description: "Cuidados para higienizar, renovar e melhorar a qualidade da pele com indicação profissional.",
     items: "Limpeza de pele · Peeling químico · Microagulhamento · Rejuvenescimento facial",
-    message: "Olá, Tatyelli! Vim pelo site e gostaria de saber mais sobre estética facial.",
   },
   {
     title: "Estética Corporal",
     image: assets.body,
     description: "Protocolos para auxiliar no cuidado corporal, sempre conforme avaliação e acompanhamento.",
     items: "Drenagem · Enzimas · Criolipólise · Detox · Endermoterapia · Corrente russa",
-    message: "Olá, Tatyelli! Vim pelo site e gostaria de saber mais sobre estética corporal.",
   },
   {
     title: "Depilação a Laser",
     image: assets.laser,
     description: "Tecnologia para redução progressiva dos pelos, com mais praticidade, conforto e segurança.",
     items: "Depilação a laser com orientação antes, durante e depois das sessões",
-    message: "Olá, Tatyelli! Vim pelo site e gostaria de saber mais sobre depilação a laser.",
   },
   {
     title: "Injetáveis e Rejuvenescimento",
     image: assets.clinicTwo,
     description: "Tratamentos voltados para firmeza, textura e naturalidade, com segurança e planejamento.",
     items: "Toxina botulínica · Preenchimentos · Bioestimuladores · Skinbooster",
-    message: "Olá, Tatyelli! Vim pelo site e gostaria de saber mais sobre injetáveis e rejuvenescimento.",
   },
   {
     title: "Pós-operatório e Pós-parto",
     image: assets.body,
     description: "Atendimento cuidadoso para fases que exigem acolhimento, avaliação e condutas individualizadas.",
     items: "Drenagem · Flacidez · Celulite · Pós-parto · Pós-operatório",
-    message: "Olá, Tatyelli! Vim pelo site e gostaria de saber mais sobre pós-operatório e pós-parto.",
   },
   {
     title: "Procedimentos Específicos",
     image: assets.laser,
     description: "Opções com tecnologia para necessidades pontuais, indicadas após análise profissional.",
     items: "Remoção de tatuagem · Secagem de vasinhos · Bumbum na nuca · Glúteo Max",
-    message: "Olá, Tatyelli! Vim pelo site e gostaria de saber mais sobre procedimentos específicos.",
   },
 ];
 

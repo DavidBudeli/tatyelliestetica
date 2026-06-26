@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { whatsappUrl } from "@/lib/constants";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export function FinalCTA() {
   return (
@@ -21,9 +21,9 @@ export function FinalCTA() {
           Agende sua avaliação e descubra o protocolo mais indicado para o seu objetivo.
         </p>
         <motion.a
-          href={whatsappUrl()}
+          href={getWhatsAppUrl()}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           whileHover={{ y: -2, scale: 1.015 }}
           whileTap={{ scale: 0.98 }}
           className="focus-ring mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-tatyelli-gold px-6 font-black text-tatyelli-green-dark transition-colors hover:bg-tatyelli-gold-soft"

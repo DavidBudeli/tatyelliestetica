@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { assets, siteConfig } from "@/lib/constants";
 
 const geist = Geist({
@@ -125,6 +126,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

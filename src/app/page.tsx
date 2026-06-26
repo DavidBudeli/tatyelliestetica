@@ -10,7 +10,6 @@ import { Method } from "@/components/Method";
 import { Results } from "@/components/Results";
 import { Services } from "@/components/Services";
 import { Testimonials } from "@/components/Testimonials";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -29,7 +28,6 @@ export default function Home() {
         <FinalCTA />
       </main>
       <Footer />
-      <WhatsAppButton />
     </>
   );
 }

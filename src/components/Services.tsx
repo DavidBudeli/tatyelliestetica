@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { services, whatsappUrl } from "@/lib/constants";
+import { services } from "@/lib/constants";
 import { scrollRevealConfig } from "@/lib/animations";
+import { getProcedureWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Services() {
   const scopeRef = useRef<HTMLElement>(null);
@@ -83,9 +84,9 @@ export function Services() {
                 <p className="mt-3 text-sm leading-6 text-neutral-700">{service.description}</p>
                 <p className="mt-4 text-sm font-extrabold leading-6 text-tatyelli-green-soft">{service.items}</p>
                 <motion.a
-                  href={whatsappUrl(service.message)}
+                  href={getProcedureWhatsAppUrl(service.title)}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.015 }}
                   whileTap={{ scale: 0.98 }}
                   className="focus-ring mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-tatyelli-green px-4 text-center font-black text-white transition-colors hover:bg-tatyelli-green-soft"

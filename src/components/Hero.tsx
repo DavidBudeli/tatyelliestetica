@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { assets, authorityItems, whatsappUrl } from "@/lib/constants";
+import { assets, authorityItems } from "@/lib/constants";
 import { ctaPulseConfig, heroEntrance } from "@/lib/animations";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Hero() {
   const scopeRef = useRef<HTMLElement>(null);
@@ -72,9 +73,9 @@ export function Hero() {
             <motion.a
               data-hero-action
               data-gsap-cta
-              href={whatsappUrl()}
+              href={getWhatsAppUrl()}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               whileTap={{ scale: 0.98 }}
               className="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-tatyelli-green px-5 text-center font-black text-white shadow-premium transition-colors hover:bg-tatyelli-green-soft"
             >

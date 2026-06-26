@@ -1,4 +1,5 @@
-import { assets, navItems, siteConfig, whatsappUrl } from "@/lib/constants";
+import { assets, navItems, siteConfig } from "@/lib/constants";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Footer() {
   return (
@@ -18,7 +19,12 @@ export function Footer() {
             <a href={`mailto:${siteConfig.email}`} className="w-fit hover:text-tatyelli-gold-soft">
               {siteConfig.email}
             </a>
-            <a href={whatsappUrl("Olá, Tatyelli! Vim pelo site e gostaria de falar com a clínica.")} className="w-fit hover:text-tatyelli-gold-soft">
+            <a
+              href={getWhatsAppUrl("Olá, Tatyelli! Vim pelo site e gostaria de falar com a clínica.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit hover:text-tatyelli-gold-soft"
+            >
               WhatsApp: {siteConfig.whatsappFormatted}
             </a>
             <a href={siteConfig.instagramUrl} target="_blank" rel="noreferrer" className="w-fit hover:text-tatyelli-gold-soft">
