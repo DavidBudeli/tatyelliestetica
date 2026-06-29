@@ -21,6 +21,7 @@ export const siteConfig = {
 export const navItems = [
   { label: "Início", href: "#inicio" },
   { label: "Procedimentos", href: "#procedimentos" },
+  { label: "Catálogo", href: "#catalogo" },
   { label: "Sobre", href: "#sobre" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Localização", href: "#localizacao" },
@@ -88,6 +89,88 @@ export const services = [
     image: assets.laser,
     description: "Opções com tecnologia para necessidades pontuais, indicadas após análise profissional.",
     items: "Remoção de tatuagem · Secagem de vasinhos · Bumbum na nuca · Glúteo Max",
+  },
+];
+
+export type CatalogItem = {
+  name: string;
+  price: string;
+  image: string;
+  description: string;
+};
+
+export const catalogItems: CatalogItem[] = [
+  {
+    name: "Corrente Russa",
+    price: "R$ 79,99",
+    image: "/assets/tatyelli/catalogo/corrente-russa.jpg",
+    description: "Procedimento corporal que auxilia na tonificação muscular e melhora do contorno corporal.",
+  },
+  {
+    name: "Enzimas",
+    price: "R$ 259,99",
+    image: "/assets/tatyelli/catalogo/enzimas.jpg",
+    description: "Protocolo indicado após avaliação para auxiliar em objetivos corporais específicos.",
+  },
+  {
+    name: "Skin Booster",
+    price: "R$ 350,00",
+    image: "/assets/tatyelli/catalogo/skin-booster.jpg",
+    description: "Tratamento voltado para hidratação profunda, viço e melhora da qualidade da pele.",
+  },
+  {
+    name: "Microagulhamento",
+    price: "R$ 289,99",
+    image: "/assets/tatyelli/catalogo/microagulhamento.jpg",
+    description: "Procedimento estético que auxilia na renovação da pele, textura e estímulo de colágeno.",
+  },
+  {
+    name: "Tabela de Preços",
+    price: "Consultar",
+    image: "/assets/tatyelli/catalogo/tabela-precos.jpg",
+    description: "Confira valores e opções de procedimentos disponíveis na clínica.",
+  },
+  {
+    name: "Drenagem Linfática Premium",
+    price: "R$ 159,99",
+    image: "/assets/tatyelli/catalogo/drenagem-linfatica-premium.jpg",
+    description: "Técnica que auxilia na retenção de líquidos, sensação de leveza e bem-estar corporal.",
+  },
+  {
+    name: "Botox",
+    price: "R$ 999,99",
+    image: "/assets/tatyelli/catalogo/botox.jpg",
+    description: "Procedimento indicado para suavização de linhas de expressão, sempre após avaliação profissional.",
+  },
+  {
+    name: "Bumbum Up",
+    price: "R$ 99,99",
+    image: "/assets/tatyelli/catalogo/bumbum-up.jpg",
+    description: "Protocolo corporal para modelagem e harmonização da região dos glúteos.",
+  },
+  {
+    name: "Criofrequência",
+    price: "R$ 159,99",
+    image: "/assets/tatyelli/catalogo/criofrequencia.jpg",
+    description: "Tecnologia estética utilizada para auxiliar em protocolos de firmeza, contorno e textura da pele.",
+  },
+  {
+    name: "Depilação a Laser",
+    price: "R$ 60,00",
+    image: "/assets/tatyelli/catalogo/depilacao-a-laser.jpg",
+    description: "Auxilia na redução progressiva dos pelos, trazendo mais praticidade para a rotina.",
+  },
+  {
+    name: "Peeling Químico",
+    price: "R$ 169,99",
+    image: "/assets/tatyelli/catalogo/peeling-quimico.jpg",
+    description: "Tratamento indicado para renovação da pele, controle de oleosidade, manchas e textura, conforme avaliação.",
+  },
+  {
+    name: "Método TC",
+    price: "R$ 1.999,99",
+    image: "/assets/tatyelli/catalogo/metodo-tc.jpg",
+    description: "Protocolo exclusivo da clínica, com avaliação individual e estratégia personalizada de tratamento.",
   },
 ];
 

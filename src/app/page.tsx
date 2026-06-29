@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { CatalogSection } from "@/components/CatalogSection";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
+        <CatalogSection />
         <Method />
         <Results />
         <Testimonials />
