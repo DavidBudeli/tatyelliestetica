@@ -41,7 +41,7 @@ function CatalogImage({ item }: { item: CatalogItem }) {
       alt={`${item.name} na Estética Tatyelli Cristina`}
       fill
       sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-      className="object-contain"
+      className="object-contain transition-transform duration-500 group-hover:scale-[1.035]"
       onError={() => setHasError(true)}
     />
   );
@@ -128,7 +128,7 @@ export function CatalogSection() {
               viewport={{ once: true, margin: "-60px" }}
               whileHover={shouldReduceMotion ? undefined : { y: -6 }}
               transition={{ type: "spring", stiffness: 260, damping: 24 }}
-              className="group flex h-full min-w-0 flex-col overflow-hidden rounded-panel border border-tatyelli-gold/25 bg-white/65 shadow-[0_18px_55px_rgba(6,46,38,0.08)] backdrop-blur transition-shadow duration-300 hover:shadow-premium"
+              className="group flex h-full min-w-0 flex-col overflow-hidden rounded-panel border border-tatyelli-gold/25 bg-white/65 shadow-[0_18px_55px_rgba(6,46,38,0.08)] backdrop-blur transition-[border-color,box-shadow] duration-300 hover:border-tatyelli-gold/50 hover:shadow-premium"
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#F7F2E8]">
                 <CatalogImage item={item} />

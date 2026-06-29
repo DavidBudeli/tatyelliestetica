@@ -11,7 +11,7 @@ const geist = Geist({
 
 const title = "Estética Tatyelli Cristina | Estética Facial, Corporal e Depilação a Laser";
 const description =
-  "Clínica de estética com 10 anos de experiência em procedimentos faciais, corporais, depilação a laser e protocolos personalizados. Agende sua avaliação pelo WhatsApp.";
+  "Clínica de estética com 10 anos de experiência em estética facial, corporal, depilação a laser e protocolos personalizados. Agende sua avaliação pelo WhatsApp.";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -98,8 +98,10 @@ export default function RootLayout({
       streetAddress: siteConfig.address.street,
       addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.region,
+      postalCode: siteConfig.address.postalCode,
       addressCountry: siteConfig.address.country,
     },
+    hasMap: siteConfig.address.mapsUrl,
     sameAs: [siteConfig.instagramUrl, siteConfig.professionalInstagramUrl],
     knowsAbout: [
       "Estética facial",

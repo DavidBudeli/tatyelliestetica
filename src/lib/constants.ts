@@ -10,11 +10,16 @@ export const siteConfig = {
   professionalInstagramUrl: "https://www.instagram.com/tatyellics_/",
   domain: "https://seu-dominio.com.br",
   address: {
-    street: "Endereço a configurar",
-    city: "Cidade a configurar",
-    region: "UF",
+    street: "Rua Rio Japurá, 2270, Bairro Alto",
+    city: "Curitiba",
+    region: "PR",
+    postalCode: "82820-020",
     country: "BR",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Est%C3%A9tica%20Tatyelli%20Cristina",
+    full: "Rua Rio Japurá, 2270, Bairro Alto, Curitiba PR, 82820-020, Brasil",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Rua%20Rio%20Japur%C3%A1%2C%202270%2C%20Bairro%20Alto%2C%20Curitiba%20PR%2C%2082820-020%2C%20Brasil",
+    mapsEmbedUrl:
+      "https://www.google.com/maps?q=Rua%20Rio%20Japur%C3%A1%2C%202270%2C%20Bairro%20Alto%2C%20Curitiba%20PR%2C%2082820-020%2C%20Brasil&output=embed",
   },
 };
 

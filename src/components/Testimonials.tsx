@@ -2,30 +2,29 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import { feedbackImages, feedbackVideos } from "@/lib/constants";
+import { useGsapSectionReveal } from "@/lib/useGsapSectionReveal";
 
 export function Testimonials() {
+  const scopeRef = useRef<HTMLElement>(null);
+  useGsapSectionReveal(scopeRef);
+
   return (
-    <section id="depoimentos" className="section-shell bg-tatyelli-beige">
+    <section ref={scopeRef} id="depoimentos" className="section-shell bg-tatyelli-beige">
       <div className="container-page">
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.65 }}
-          className="max-w-3xl"
-        >
+        <div data-reveal className="max-w-3xl">
           <p className="eyebrow">Depoimentos</p>
-          <h2 className="heading-lg">Feedbacks reais de clientes</h2>
-          <p className="body-copy mt-4">
-            Prints e vídeos compartilhados como prova social. Resultados e percepções podem variar conforme cada pessoa, rotina e protocolo indicado.
-          </p>
-        </motion.div>
+          <h2 className="heading-lg">Feedbacks de clientes</h2>
+          <p className="body-copy mt-4">Experiências reais compartilhadas por quem já foi atendida.</p>
+          <span data-reveal-line className="mt-6 block h-px w-36 scale-x-0 bg-tatyelli-gold" />
+        </div>
 
         <div className="mt-10 flex snap-x gap-4 overflow-x-auto pb-4 [scrollbar-width:thin] md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3">
           {feedbackImages.map((feedback) => (
             <motion.article
               key={feedback.src}
+              data-reveal-card
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.99 }}
               className="min-w-[78vw] snap-center rounded-panel border border-tatyelli-green/10 bg-white p-3 shadow-soft min-[430px]:min-w-[320px] md:min-w-0"
@@ -45,6 +44,7 @@ export function Testimonials() {
           {feedbackVideos.map((video, index) => (
             <motion.article
               key={video}
+              data-reveal-card
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.99 }}
               className="min-w-[78vw] snap-center rounded-panel border border-tatyelli-green/10 bg-white p-3 shadow-soft min-[430px]:min-w-[320px] md:min-w-0"
@@ -53,13 +53,13 @@ export function Testimonials() {
                 <source src={video} type="video/mp4" />
               </video>
               <strong className="mt-4 block text-tatyelli-green-dark">Feedback em vídeo {index + 1}</strong>
-              <p className="mt-1 text-sm leading-6 text-neutral-600">Conteúdo disponível para reprodução manual.</p>
+              <p className="mt-1 text-sm leading-6 text-neutral-600">Reprodução manual.</p>
             </motion.article>
           ))}
         </div>
 
         <p className="mt-5 max-w-3xl text-sm leading-6 text-neutral-600">
-          Os feedbacks demonstram experiências individuais. Procedimentos são indicados após avaliação e os resultados podem variar.
+          Experiências individuais. Procedimentos são indicados após avaliação.
         </p>
       </div>
     </section>
